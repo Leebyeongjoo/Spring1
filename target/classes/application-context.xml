@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans  
+http://www.springframework.org/schema/beans/spring-beans.xsd"
+
+>
+	
+	<bean id="test" class="ex01.SpringTest" scope="prototype"/>
+	
+	<!-- 호텔객체, 쉐프객체 -->
+	<bean id="chef" class="ex02.construct.Chef"/>
+	<bean id="hotel" class="ex02.construct.Hotel">
+		<constructor-arg ref="chef"></constructor-arg>
+	</bean>
+	<!-- 세터주입-->
+	<bean id ="dbDev" class="ex03.setter.DatabaseDev">
+	<property name="url" value="데이터베이스주소"/>
+	<property name="uid" value="아이디"/>
+	<property name="upw" value="비밀번호"/>
+	</bean>
+	<!-- 세터주입(객체) -->
+	<bean id="memberDAO" class="ex03.setter.MemberDAO">
+	<property name="datasource" ref="dbDev"></property>
+	</bean>
+	
+	<bean id="Battery1" class="ex04.quiz.Battery1"></bean>
+	<bean id="Battery2" class="ex04.quiz.Battery2"></bean>
+	
+	<bean id ="Car" class="ex04.quiz.Car">
+		<constructor-arg name="battery" ref="Battery1" ></constructor-arg>
+	</bean>
+	
+	<bean id ="Airplane" class="ex04.quiz.Airplane">
+		<property name="battery" ref="Battery2"></property>
+	</bean>
+	
+	
+	
+	
+	
+
+</beans>
