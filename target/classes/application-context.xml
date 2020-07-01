@@ -23,7 +23,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
 	<bean id="memberDAO" class="ex03.setter.MemberDAO">
 	<property name="datasource" ref="dbDev"></property>
 	</bean>
-	
+	<!--문제  -->
 	<bean id="Battery1" class="ex04.quiz.Battery1"></bean>
 	<bean id="Battery2" class="ex04.quiz.Battery2"></bean>
 	

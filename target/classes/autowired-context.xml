@@ -16,6 +16,8 @@
     -->
    <context:annotation-config/>
    <bean id = "doc1" class = "ex06.autowired.Document" />
+   
+   <bean id = "doc2" class = "ex06.autowired.Document" />
 
    <!-- 자바문서에서 어노테이션 방식으로 의존객체 자동주입 -->
    <bean id = "printer" class = "ex06.autowired.Printer" >
@@ -23,8 +25,17 @@
    </bean>
    
 
-
-
+	<bean id ="printer2" class="ex06.autowired.Printer2">
+	</bean>
+	<!-- 문제 -->
+	<bean id ="computer" class="ex07.quiz.Computer">
+	</bean>
+	<bean id ="keyboard" class="ex07.quiz.Keyboard">
+	</bean>
+	<bean id ="monitor" class="ex07.quiz.Monitor">
+	</bean>
+	<bean id ="Mouse" class="ex07.quiz.Mouse">
+	</bean>
 
 
 
